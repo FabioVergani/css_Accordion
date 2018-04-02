@@ -1,0 +1,25 @@
+ul.accordion{margin:0;padding:0}
+
+ul.accordion>li>input{
+-webkit-appearance:none;
+box-sizing:border-box;
+display:block;
+margin:0;
+outline:0;
+height:3em;
+width:100%;
+max-width:100%;
+position:relative;
+cursor:pointer;
+}
+
+ul.accordion>li>input:after,
+ul.accordion>li>input:before{position:absolute;top:0;line-height:3em;height:3em}
+
+ul.accordion>li>input:before{text-align:left;content:attr(data-label)}
+ul.accordion>li>input:after{right:0;width:3em;text-align:center;content:"+"}
+ul.accordion>li>input:checked:after{content:"-"}
+
+ul.accordion>li>div{height:auto;max-height:0;overflow:hidden;transition:max-height .5s;}
+ul.accordion>li>input:checked+div{max-height:10em}
+
